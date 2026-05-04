@@ -1,17 +1,33 @@
-<html>
+ <!DOCTYPE html>
 <html>
 <head>
     <title>My Portfolio</title>
+
+    <!-- Spline Viewer Script -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.59/build/spline-viewer.js"></script>
+
     <style>
         body {
+            margin: 0;
             font-family: Arial;
-            text-align: center;
             background: #0f172a;
             color: white;
+            overflow: hidden;
         }
-        .box {
-            margin-top: 100px;
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 10;
         }
+
+        h1 {
+            font-size: 40px;
+        }
+
         a {
             display: block;
             margin: 15px;
@@ -19,17 +35,36 @@
             color: #38bdf8;
             text-decoration: none;
         }
+
+        a:hover {
+            color: white;
+        }
+
+        spline-viewer {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
     </style>
 </head>
+
 <body>
 
-<div class="box">
+<!-- Spline Background -->
+<spline-viewer url="https://prod.spline.design/a1f156f7-ef01-42d1-bf7b-5be1b7967b0a/scene.splinecode"></spline-viewer>
+
+<!-- Content -->
+<div class="content">
     <h1>Aryan Srivastava</h1>
     <p>BSc Data Science Student</p>
 
     <a href="Aryan_Resume.pdf" target="_blank">📄 Resume</a>
-    <a href="https://github.com/aryan29101">💻GitHub</a>
-    <a href="https://www.linkedin.com/in/aryan-srivastava-048b93344?utm_source=share_via&utm_content=profile&utm_medium=member_android">LinkedIn</a>
+    <a href="https://github.com/aryan29101">💻 GitHub</a>
+    <a href="https://www.linkedin.com/in/aryan-srivastava-048b93344">🔗 LinkedIn</a>
+</div>
 
 </body>
 </html>
