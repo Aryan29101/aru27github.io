@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aryan Srivastava | Data Scientist Portfolio</title>
-    <meta name="description" content="Portfolio of Aryan Srivastava, a BSc Data Science Student specializing in modern data solutions and 3D web experiences.">
+    <title>Aryan Srivastava | Portfolio</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <!-- Spline Viewer -->
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.59/build/spline-viewer.js"></script>
@@ -18,76 +17,65 @@
 </head>
 <body>
 
-    <!-- 3D Background -->
-    <div class="spline-container">
-        <spline-viewer url="https://app.spline.design/file/2d225387-f18a-4793-9b08-d5ad0273ac2f/scene.splinecode"></spline-viewer>
-    </div>
-
-    <!-- Main Content -->
-    <main class="content-wrapper">
-        <div class="glass-card">
-            <header class="profile-header">
-                <div class="avatar-container">
-                    <spline-viewer url="https://app.spline.design/file/f7036495-2009-455a-83b6-2041ccb67a5b/scene.splinecode"></spline-viewer>
+    <div class="presentation-wrapper">
+        <div class="app-container">
+            
+            <!-- Top Navigation -->
+            <nav class="navbar">
+                <div class="logo">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    <span>Aryan.</span>
                 </div>
-                <div class="profile-badge">BSc Data Science</div>
-                <h1 class="name">Aryan Srivastava</h1>
-                <p class="tagline">Crafting data-driven narratives and immersive web experiences.</p>
-            </header>
-
-            <nav class="links-container">
-                <a href="Aryan_Resume.pdf" target="_blank" class="nav-link primary">
-                    <span class="icon">📄</span>
-                    <span class="text">View Resume</span>
-                </a>
-                <div class="social-links">
-                    <a href="https://github.com/aryan29101" target="_blank" class="nav-link secondary">
-                        <span class="icon">💻</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/aryan-srivastava-048b93344" target="_blank" class="nav-link secondary">
-                        <span class="icon">🔗</span>
-                    </a>
+                <div class="nav-links">
+                    <a href="https://github.com/aryan29101" target="_blank">Work</a>
+                    <a href="https://www.linkedin.com/in/aryan-srivastava-048b93344" target="_blank">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Products</a>
+                </div>
+                <div class="nav-contact">
+                    <a href="#" class="nav-btn">Contact</a>
                 </div>
             </nav>
 
-            <form class="contact-form">
-                <h3 class="form-title">Send a Message</h3>
-                <div class="input-group">
-                    <input type="text" placeholder="Your Name" required>
+            <!-- Center 3D Object -->
+            <div class="center-stage">
+                <div class="glow-orb"></div>
+                <!-- Using your Spline scene centered -->
+                <div class="spline-wrapper">
+                    <spline-viewer url="https://app.spline.design/file/2d225387-f18a-4793-9b08-d5ad0273ac2f/scene.splinecode"></spline-viewer>
                 </div>
-                <div class="input-group">
-                    <input type="email" placeholder="Your Email" required>
-                </div>
-                <div class="input-group">
-                    <textarea placeholder="Your Message" rows="3" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
+            </div>
 
-            <footer class="card-footer">
-                <p>© 2024 Aryan Srivastava</p>
-            </footer>
+            <!-- Bottom Content -->
+            <div class="bottom-section">
+                <div class="left-text">
+                    <h1>Building Cool<br>Data Experiences</h1>
+                </div>
+                
+                <div class="right-content">
+                    <p>BSc Data Science Student crafting intelligent narratives, modern web solutions, and predictive models.</p>
+                    <div class="action-buttons">
+                        <a href="Aryan_Resume.pdf" target="_blank" class="btn btn-outline">View Resume</a>
+                        <a href="https://github.com/aryan29101" target="_blank" class="btn btn-primary">
+                            GitHub
+                            <div class="blue-dot"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subtle Grid Background Overlay -->
+            <div class="bg-grid"></div>
         </div>
-    </main>
-
-    <!-- Overlay for better contrast -->
-    <div class="vignette"></div>
+    </div>
 
     <script>
-        // 3D Parallax Tilt Effect for the Glass Card
-        const card = document.querySelector('.glass-card');
-        const wrapper = document.querySelector('.content-wrapper');
-
+        // Subtle mouse move parallax for the inner container to make it feel premium
+        const container = document.querySelector('.app-container');
         document.addEventListener('mousemove', (e) => {
-            const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
-            const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
-            
-            card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
-        });
-
-        // Reset on mouse leave
-        document.addEventListener('mouseleave', () => {
-            card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+            const x = (window.innerWidth / 2 - e.pageX) / 50;
+            const y = (window.innerHeight / 2 - e.pageY) / 50;
+            container.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
         });
     </script>
 </body>
