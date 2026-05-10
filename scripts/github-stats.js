@@ -80,6 +80,6 @@ window.addEventListener('load', () => {
             terminalOutput.appendChild(startEntry);
         }
         // Small delay to ensure other terminal logs have printed
-        setTimeout(() => updateGithubStats('NEELU-05'), 1000); 
+        setTimeout(() => updateGithubStats('Aryan29101'), 1000); 
     }
 });

@@ -123,7 +123,7 @@ function renderFooter() {
             <a class="nav-logo" href="index.html" style="font-size:1.2rem;">Aryan<span style="color:var(--secondary)">.</span></a>
             <div class="footer-links">
                 <a href="https://linkedin.com/in/aryan-srivastava-048b93344" target="_blank">LinkedIn</a>
-                <a href="https://github.com/AryanSrivastava" target="_blank">GitHub</a>
+                <a href="https://github.com/Aryan29101" target="_blank">GitHub</a>
                 <a href="https://hackerrank.com/AryanSrivastava" target="_blank">HackerRank</a>
                 <a href="mailto:aryansrivastava292005@gmail.com">Email</a>
             </div>
