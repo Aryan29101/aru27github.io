@@ -41,6 +41,7 @@ const NODE_CONFIG = {
         { label: ">_ DASHBOARD", href: "index.html" },
         { label: ">_ PROFILE", href: "profile.html" },
         { label: ">_ CAPABILITIES", href: "capabilities.html" },
+        { label: ">_ CERTIFICATIONS", href: "certifications.html" },
         { label: ">_ MISSIONS", href: "missions.html" },
         { label: ">_ CONTACT", href: "contact.html" }
     ],

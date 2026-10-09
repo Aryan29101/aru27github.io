@@ -7,6 +7,7 @@ const NAV_LINKS = [
     { label: 'Home', href: 'index.html' },
     { label: 'Profile', href: 'profile.html' },
     { label: 'Skills', href: 'capabilities.html' },
+    { label: 'Certifications', href: 'certifications.html' },
     { label: 'Projects', href: 'missions.html' },
     { label: 'Contact', href: 'contact.html' }
 ];
@@ -122,12 +123,14 @@ function renderFooter() {
         <div class="footer-content">
             <a class="nav-logo" href="index.html" style="font-size:1.2rem;">Aryan<span style="color:var(--secondary)">.</span></a>
             <div class="footer-links">
-                <a href="https://linkedin.com/in/aryan-srivastava-048b93344" target="_blank">LinkedIn</a>
-                <a href="https://github.com/Aryan29101" target="_blank">GitHub</a>
-                <a href="https://hackerrank.com/AryanSrivastava" target="_blank">HackerRank</a>
-                <a href="mailto:aryansrivastava292005@gmail.com">Email</a>
+                <a href="profile.html">Profile</a>
+                <a href="capabilities.html">Skills</a>
+                <a href="certifications.html">Certifications</a>
+                <a href="missions.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <a href="Aryan_Resume.pdf" target="_blank">Resume</a>
             </div>
-            <p class="footer-copy">© ${new Date().getFullYear()} Aryan Srivastava · Greater Noida, India</p>
+            <p class="footer-copy">© ${new Date().getFullYear()} Aryan Srivastava · Noida, Uttar Pradesh, India</p>
         </div>
     `;
 }
