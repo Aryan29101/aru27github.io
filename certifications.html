@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Certifications & Simulations — Aryan Srivastava | Data Analyst</title>
+    <meta name="description" content="Verified certifications and corporate job simulations of Aryan Srivastava — British Airways, Deloitte, Tata iQ, Code Alpha, and CodeSoft.">
+    <link rel="stylesheet" href="style.css"/>
+    <style>
+        .filter-btn {
+            background: rgba(12, 12, 32, 0.6);
+            border: 1px solid var(--border);
+            color: var(--text-dim);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .filter-btn:hover, .filter-btn.active {
+            color: var(--text);
+            border-color: var(--primary-light);
+            background: rgba(124, 58, 237, 0.15);
+            box-shadow: 0 0 15px rgba(124, 58, 237, 0.25);
+        }
+        .cert-card {
+            transition: transform 0.4s ease, opacity 0.4s ease, border-color var(--transition);
+        }
+        .cert-card.hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="aurora-bg"></div>
+    <canvas id="particles-canvas"></canvas>
+    <nav class="nav" id="main-nav"></nav>
+
+    <main class="section" style="padding-top:8rem;">
+        <!-- Header -->
+        <div class="reveal" style="margin-bottom:3rem;">
+            <p class="section-label">// credentials & verified simulations</p>
+            <h1 class="section-title">Certifications & Simulations</h1>
+            <p class="section-subtitle">Hands-on corporate job simulations, data analytics internships, and verified technical credentials.</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="reveal" style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:2.5rem;align-items:center;">
+            <button class="filter-btn active" onclick="filterCerts('all', this)">All Credentials (6)</button>
+            <button class="filter-btn" onclick="filterCerts('simulation', this)">Job Simulations (3)</button>
+            <button class="filter-btn" onclick="filterCerts('internship', this)">Internships (2)</button>
+            <button class="filter-btn" onclick="filterCerts('problem-solving', this)">Problem Solving (1)</button>
+        </div>
+
+        <!-- Certifications Grid -->
+        <div class="grid-2" id="certs-grid">
+            <!-- 1. British Airways -->
+            <div class="glass project-card cert-card reveal reveal-delay-1" data-category="simulation" data-tilt>
+                <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:1rem;">
+                    <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,rgba(124,58,237,0.2),rgba(6,182,212,0.2));display:flex;align-items:center;justify-content:center;font-size:1.3rem;">✈️</div>
+                    <span class="badge badge-pink">September 2026</span>
+                </div>
+                <h3 style="font-size:1.2rem;margin-bottom:0.25rem;">British Airways Data Science Job Simulation</h3>
+                <p style="color:var(--secondary);font-size:0.85rem;font-family:var(--font-mono);margin-bottom:0.75rem;">Forage — Virtual Job Simulation</p>
+                <p style="font-size:0.88rem;line-height:1.7;margin-bottom:1rem;">
+                    Completed a virtual job simulation focused on data science for the aviation industry, working with real-world style datasets. Applied PowerPoint and Excel to analyze data and present findings in a clear, business-ready format.
+                </p>
+                <div class="project-tech">
+                    <span class="badge badge-purple" style="font-size:0.7rem;">Data Science</span>
+                    <span class="badge badge-cyan" style="font-size:0.7rem;">MS Excel</span>
+                    <span class="badge badge-pink" style="font-size:0.7rem;">Aviation Analytics</span>
+                    <span class="badge badge-purple" style="font-size:0.7rem;">Business Reporting</span>
+                </div>
+                <div style="margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--border);">
+                    <p style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.2rem;">Core Competency</p>
+                    <p style="font-size:0.88rem;color:var(--primary-light);">Business communication, customer dataset insights, and executive summaries.</p>
+                </div>
+            </div>
+
+            <!-- 2. Deloitte -->
+            <div class="glass project-card cert-card reveal reveal-delay-2" data-category="simulation" data-tilt>
+                <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:1rem;">
+                    <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,rgba(6,182,212,0.2),rgba(124,58,237,0.2));display:flex;align-items:center;justify-content:center;font-size:1.3rem;">📊</div>
+                    <span class="badge badge-cyan">September 2026</span>
+                </div>
+                <h3 style="font-size:1.2rem;margin-bottom:0.25rem;">Deloitte Data Visualization Job Simulation</h3>
+                <p style="color:var(--accent);font-size:0.85rem;font-family:var(--font-mono);margin-bottom:0.75rem;">Forage — Virtual Job Simulation</p>
+                <p style="font-size:0.88rem;line-height:1.7;margin-bottom:1rem;">
+                    Completed a virtual job simulation focused on data visualization and analytics consulting. Used Microsoft Excel and Tableau to clean, visualize, and interpret data for actionable business insights.
+                </p>
+                <div class="project-tech">
+                    <span class="badge badge-cyan" style="font-size:0.7rem;">Tableau</span>
+                    <span class="badge badge-pink" style="font-size:0.7rem;">Data Visualization</span>
+                    <span class="badge badge-purple" style="font-size:0.7rem;">MS Excel</span>
+                    <span class="badge badge-cyan" style="font-size:0.7rem;">Analytics Consulting</span>
+                </div>
+                <div style="margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--border);">
+                    <p style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.2rem;">Core Competency</p>
+                    <p style="font-size:0.88rem;color:var(--secondary);">Tableau dashboard architecture, visual storytelling, and KPI extraction.</p>
+                </div>
+            </div>
+
+            <!-- 3. Tata Data Analytics -->
+            <div class="glass project-card cert-card reveal reveal-delay-3" data-category="simulation" data-tilt>
+                <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:1rem;">
+                    <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,rgba(124,58,237,0.2),rgba(251,146,60,0.2));display:flex;align-items:center;justify-content:center;font-size:1.3rem;">🏢</div>
+                    <span class="badge badge-purple">September 2026</span>
+                </div>
+                <h3 style="font-size:1.2rem;margin-bottom:0.25rem;">Tata Data Analytics Job Simulation</h3>
+                <p style="color:var(--primary-light);font-size:0.85rem;font-family:var(--font-mono);margin-bottom:0.75rem;">Forage — Virtual Job Simulation (Tata iQ)</p>
+                <p style="font-size:0.88rem;line-height:1.7;margin-bottom:1rem;">
+                    Completed a virtual job simulation with Tata iQ focused on data analytics consulting, identifying key business problems and translating raw data into actionable insights. Cleaned and analyzed data to support strategic business recommendations for senior stakeholders.
+                </p>
+                <div class="project-tech">
+                    <span class="badge badge-purple" style="font-size:0.7rem;">Tata iQ</span>
+                    <span class="badge badge-cyan" style="font-size:0.7rem;">Data Cleaning</span>
+                    <span class="badge badge-pink" style="font-size:0.7rem;">Actionable Insights</span>
+                    <span class="badge badge-purple" style="font-size:0.7rem;">Senior Stakeholder Reporting</span>
+                </div>
+                <div style="margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--border);">
+                    <p style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.2rem;">Core Competency</p>
+                    <p style="font-size:0.88rem;color:var(--accent);">Strategic business framing, clean dataset modeling, and structured consulting decks.</p>
+                </div>
+            </div>
+
+            <!-- 4. Code Alpha Internship -->
+            <div class="glass project-card cert-card reveal reveal-delay-4" data-category="internship" data-tilt>
+                <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:1rem;">
+                    <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,rgba(6,182,212,0.2),rgba(244,114,182,0.2));display:flex;align-items:center;justify-content:center;font-size:1.3rem;">📈</div>
+                    <span class="badge badge-pink">2025</span>
+                </div>
+                <h3 style="font-size:1.2rem;margin-bottom:0.25rem;">Data Analytics Internship</h3>
+                <p style="color:var(--accent);font-size:0.85rem;font-family:var(--font-mono);margin-bottom:0.75rem;">Code Alpha — Online Internship Certification (3 Weeks)</p>
+                <p style="font-size:0.88rem;line-height:1.7;margin-bottom:1rem;">
+                    Completed a 3-week intensive internship covering raw data cleaning, dataset preparation, and interactive dashboard creation for business performance tracking and operational visibility.
+                </p>
+                <div class="project-tech">
+                    <span class="badge badge-cyan" style="font-size:0.7rem;">Data Cleaning</span>
+                    <span class="badge badge-pink" style="font-size:0.7rem;">Interactive Dashboards</span>
+                    <span class="badge badge-purple" style="font-size:0.7rem;">Dataset Preparation</span>
+                    <span class="badge badge-cyan" style="font-size:0.7rem;">Data Analytics</span>
+                </div>
+                <div style="margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--border);">
+                    <p style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.2rem;">Core Competency</p>
+                    <p style="font-size:0.88rem;color:var(--secondary);">End-to-end data pipelines from unstructured inputs to dynamic interactive charts.</p>
+                </div>
+            </div>
+
+            <!-- 5. CodeSoft Internship -->
+            <div class="glass project-card cert-card reveal reveal-delay-4" data-category="internship" data-tilt>
+                <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:1rem;">
+                    <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,rgba(124,58,237,0.2),rgba(6,182,212,0.2));display:flex;align-items:center;justify-content:center;font-size:1.3rem;">🐍</div>
+                    <span class="badge badge-cyan">2024</span>
+                </div>
+                <h3 style="font-size:1.2rem;margin-bottom:0.25rem;">Python Programming Internship</h3>
+                <p style="color:var(--secondary);font-size:0.85rem;font-family:var(--font-mono);margin-bottom:0.75rem;">CodeSoft — Online Internship Certification</p>
+                <p style="font-size:0.88rem;line-height:1.7;margin-bottom:1rem;">
+                    Executed hands-on Python projects covering scripting, automation, file I/O workflows, text processing, and practical applications for streamlining repetitive manual tasks.
+                </p>
+                <div class="project-tech">
+                    <span class="badge badge-purple" style="font-size:0.7rem;">Basic Python</span>
+                    <span class="badge badge-cyan" style="font-size:0.7rem;">Scripting</span>
+                    <span class="badge badge-pink" style="font-size:0.7rem;">Automation</span>
+                    <span class="badge badge-purple" style="font-size:0.7rem;">File I/O</span>
+                </div>
+                <div style="margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--border);">
+                    <p style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.2rem;">Core Competency</p>
+                    <p style="font-size:0.88rem;color:var(--primary-light);">Algorithmic Python scripting, modular design, and robust file automation.</p>
+                </div>
+            </div>
+
+            <!-- 6. HackerRank -->
+            <div class="glass project-card cert-card reveal reveal-delay-4" data-category="problem-solving" data-tilt>
+                <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:1rem;">
+                    <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,rgba(244,114,182,0.2),rgba(251,146,60,0.2));display:flex;align-items:center;justify-content:center;font-size:1.3rem;">🏆</div>
+                    <span class="badge badge-purple">Ongoing</span>
+                </div>
+                <h3 style="font-size:1.2rem;margin-bottom:0.25rem;">HackerRank Problem Solving Certificate</h3>
+                <p style="color:var(--accent);font-size:0.85rem;font-family:var(--font-mono);margin-bottom:0.75rem;">HackerRank — Competitive Programming & Skills Verification</p>
+                <p style="font-size:0.88rem;line-height:1.7;margin-bottom:1rem;">
+                    Continuous problem solving covering algorithms, data structures, and core programming logic in Python, C, and SQL to hone analytical problem-solving and competitive coding speed.
+                </p>
+                <div class="project-tech">
+                    <span class="badge badge-cyan" style="font-size:0.7rem;">Basics of Algorithms</span>
+                    <span class="badge badge-purple" style="font-size:0.7rem;">Problem Solving</span>
+                    <span class="badge badge-pink" style="font-size:0.7rem;">Python, C & SQL</span>
+                    <span class="badge badge-cyan" style="font-size:0.7rem;">Data Structures</span>
+                </div>
+                <div style="margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--border);">
+                    <p style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.2rem;">Core Competency</p>
+                    <p style="font-size:0.88rem;color:var(--secondary);">Algorithmic optimization, time/space complexity analysis, and SQL queries.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resume CTA Card -->
+        <div class="glass reveal" data-tilt style="margin-top:4rem;padding:2.5rem;text-align:center;">
+            <p class="section-label" style="margin-bottom:0.5rem;">// verified documentation</p>
+            <h2 style="font-family:var(--font-display);font-size:1.75rem;font-weight:700;margin-bottom:0.75rem;">Looking for Full Credential Details?</h2>
+            <p style="color:var(--text-dim);max-width:600px;margin:0 auto 1.75rem;font-size:0.92rem;line-height:1.7;">
+                Download my complete updated resume featuring all certifications, academic standing, project metrics, and technical skill breakdowns.
+            </p>
+            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                <a href="Aryan_Resume.pdf" target="_blank" class="btn btn-primary glitch-hover">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    Download Official Resume (PDF)
+                </a>
+                <a href="contact.html" class="btn btn-outline glitch-hover">
+                    Contact Aryan
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" id="main-footer"></footer>
+    <script src="scripts/audio-system.js"></script>
+    <script src="scripts/crt-core.js"></script>
+    <script src="scripts/shared.js"></script>
+    <script>
+        function filterCerts(category, btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const cards = document.querySelectorAll('.cert-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+            if (window.AudioSystem) window.AudioSystem.play('click');
+        }
+    </script>
+</body>
+</html>
